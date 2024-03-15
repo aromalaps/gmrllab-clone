@@ -1,0 +1,61 @@
+body {
+
+    font-family: 'Roboto', sans-serif !important;
+}
+
+
+.container {
+    max-width: 1240px !important
+}
+
+
+h6 {
+    color: black;
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+a {
+    text-decoration: none !important;
+    transition-duration: 0.3s !important;
+}
+
+a:hover {
+    text-decoration: none !important;
+}
+
+
+.main8 {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.main8col1 {
+    border-right: 1px solid black;
+    background-color: #85ba32;
+}
+
+.main8col2 {
+    display: block !important;
+}
+
+.main8row2 {
+    position: relative;
+}
+
+.main8_booknow {
+    position: absolute;
+    color: #85ba32;
+    top: 29%;
+    right: 4%;
+    padding: 7px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 20px;
+    background-color: rgb(24, 44, 24);
+}
+
+.main8_openhours {
+    background-color: #85ba32;
+}
