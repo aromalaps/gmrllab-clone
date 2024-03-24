@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class=" overflow-hidden">
+    <div class="container-fluid blog_contain p-0 ">
+        <div class="row main_row">
+            <div class="col-12 page_blog w-100">
+                <div class="row w-100 p-0 m-0">
+                    <div class="col-md-6 col-12  blog_col1 p-0">
+                        <div class="blog_text2 overflow-hidden">
+                            Blog Us
+                        </div>
+                        <div class="blog_text3">
+                            GMRL Labs: Tripunithura's hub for affordable Health Check Ups
+                            with cutting-edge analyzers, prioritizing your well-being.
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12  blog_image p-0">
+                        <img src="{% static './image/tests.jpg' %}" class=" d-block w-100" alt="...">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- main page 2 -->
+<div class="main5 pt-5">
+    <div class="container pt-5">
+        <div class="row blogpage_nocarosel">
+            {% for i in blog %}
+            <div class="col-lg-4 pb-4">
+                <a href="{% url 'frond:blogdetails' i.id %}" class="blog-item-con">
+                    <div class="blog-image">
+                        <i class="fas fa-link"></i>
+                        <img width="300" height="230" src="{{ i.blog_image.url }}"
+                            class="attachment-medium size-medium wp-post-image" alt="no image" decoding="async"
+                            loading="lazy" />
+                    </div>
+                    <div class="blog-text">
+                        <h6>{{i.subject}}</h6>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+            {% comment %} <div class="col-lg-4 pb-4">
+                <a href="" class="blog-item-con">
+                    <div class="blog-image">
+                        <i class="fas fa-link"></i>
+                        <img width="300" height="208" src="{% static './image/blogcard2.jpg' %}"
+                            class="attachment-medium size-medium wp-post-image" alt="no image" decoding="async"
+                            loading="lazy" />
+                    </div>
+                    <div class="blog-text">
+                        <h6>Beyond Images: The Vital Role of Radiology in Modern Diagnostic Excellence</h6>
+
+                    </div>
+                </a>
+            </div> {% endcomment %}
+        </div>
+    </div>
+
+
+</div>
+{% endblock %}

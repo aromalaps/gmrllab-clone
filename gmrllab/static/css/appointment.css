@@ -1,0 +1,91 @@
+.book-homevisit p {
+    text-align: center;
+}
+
+
+.book-homevisit .col-lg-6 input,
+.book-homevisit .col-lg-12 input,
+.book-homevisit .col-lg-6 select {
+    width: 100%;
+    border: 1px solid #c8d1ee;
+    height: 44px;
+    border-radius: 4px;
+    outline: none;
+    transition-duration: 0.3s;
+    font-size: 15px;
+    padding-left: 12px;
+    color: black;
+    text-align: left;
+}
+
+.book-homevisit textarea {
+    width: 100%;
+    border: 1px solid #c8d1ee;
+    height: 80px;
+    border-radius: 4px;
+    outline: none;
+    transition-duration: 0.3s;
+    font-size: 15px;
+    padding-left: 12px;
+    color: black;
+    text-align: left;
+}
+
+.appointment_image img {
+    height: 70vh;
+}
+
+
+
+.book-homevisit label {
+    width: 100%;
+    text-align: left;
+    padding: 0;
+    margin: 0px 0px 3px 0px;
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+}
+
+.book-homevisit .btn {
+    color: #fff;
+    font-size: 15px;
+    border: 0;
+    transition-duration: 0.3s;
+}
+
+.book-homevisit .btn:hover {
+    background: rgb(40, 170, 40);
+}
+
+
+.book-homevisit .col-lg-12,
+.book-homevisit .col-lg-6 {
+    margin-top: 12px;
+}
+
+.appointment_text2 {
+    position: absolute;
+    bottom: 32%;
+    left: 10%;
+    font-size: 56px;
+    color: black;
+    font-family: 'Oswald', sans-serif !important;
+
+}
+
+@media (max-width: 550px) {
+    .appointment_text2 {
+        position: absolute;
+        top: 45%;
+        left: 20%;
+        text-align: center !important;
+        font-size: 30px;
+        color: black;
+        font-family: 'Oswald', sans-serif !important;
+    }
+
+    .appointment_image img {
+        height: 40vh;
+    }
+}

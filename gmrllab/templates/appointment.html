@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="main_appointment_page  overflow-hidden">
+    <div class="container-fluid  p-0 ">
+        <div class="row main_row ">
+            <div class="col-12 page_about w-100">
+                <div class="row w-100 p-0 m-0">
+                    <div class="col-md-6 col-12  about_col1 p-0">
+                        <div class="about_text2 appointment_text2 overflow-hidden">
+                            Make An Appointment
+                        </div>
+                        <div class="about_text3">
+                            Schedule your appointment today for personalized care and
+                            comprehensive health assessments.
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12  appointment_image p-0">
+                        <img src="{% static './image/package.jpg' %}" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="make_appoiment py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 book-homevisit">
+                <h3 class="text-center">Book a Home Visit</h3>
+                <p class="mb-4 text-center">Experience personalized care with our expert team—schedule your
+                    appointment for comprehensive health assessments and proactive well-being.
+                </p>
+                <form action="" method="post" onsubmit="return validateForm()">
+                    {% csrf_token %}
+                    <div class="row justify-content-center">
+                        <div class="col-lg-12" style="width: 100vw;">
+                            <p>
+                                <label>Your Name</label><br>
+                                <span class="">
+                                    <input type="text" name="name" id="appoint_name" />
+                                </span>
+                            </p>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <p>
+                                <label>Email</label>
+                                <br>
+                                <span>
+                                    <input class="email" type="email" name="email" id="appoint_email" />
+                                </span>
+                            </p>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <p>
+                                <label>Phone</label>
+                                <br>
+                                <span>
+                                    <input class="phone" type="number" name="phone" id="appoint_phone" />
+                                </span>
+                            </p>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-6">
+                            <p>
+                                <label>Date</label>
+                                <br>
+                                <span>
+                                    <input type="date" id="date" name="date">
+                                </span>
+                            </p>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-6">
+                            <p>
+                                <label for="appointment_time">Select appointment time:</label>
+                                <br>
+                                <input type="time" id="appointment_time" name="time">
+                            </p>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-6">
+                            <p>
+                                <label>Age</label><br>
+                                <span>
+                                    <input class="" type="number" name="age" id="age" />
+                                </span>
+                            </p>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-6">
+                            <p><label>Gender</label><br>
+                                <span>
+                                    <select name="gender" id="gender">
+                                        <option value="">&#8212;Please choose an option&#8212;</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                    </select>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="col-lg-12">
+                            <p><label>Address</label><br>
+                                <span>
+                                    <textarea class="" name="address" id="address"></textarea>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="col-lg-12">
+                            <p><label>Message</label><br>
+                                <span>
+                                    <textarea class="message" name="message" id="message"></textarea>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="col-lg-12 col-md-4">
+                            <p>
+                                <button type="submit" name="appoint_form1"
+                                    class="w-50 p-2 btn btn-primary text-center">SUBMIT</button>
+                            </p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="{% static 'js/makeappointment.js' %}"></script>
+
+{% endblock %}

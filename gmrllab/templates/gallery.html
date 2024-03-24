@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class=" main1 overflow-hidden">
+    <div class="container-fluid  p-0 ">
+        <div class="row main_row ">
+            <div class="col-12 page_about w-100">
+                <div class="row w-100 p-0 m-0">
+                    <div class="col-md-6 col-12  about_col1 p-0">
+                        <div class="about_text2 overflow-hidden">
+                            Gallery
+
+                        </div>
+                        <div class="about_text3">
+                            Step into the visual journey of GMRL Labs in Tripunithura—a gallery
+                            showcasing our commitment to health and excellence.
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12  about_image p-0">
+                        <img src="{% static './image/executive-package.jpg' %}" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="main_gallery pt-5">
+    <div class="container ">
+        <div class="row packagepage_nocarosel ">
+            {% for i in  gallery %}
+            <div class="col-lg-3 pb-4">
+                <a href="" class="gallery-item-con">
+                    <div class="gallery-image">
+                        <svg class="vp-svg-icon" width="30" height="30" viewBox="0 0 20 20" fill="black"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                fill="transparent"></path>
+                            <path d="M19 19L14.65 14.65" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" fill="transparent"></path>
+                        </svg>
+                        <img width="300" height="230" src="{{i.image.url}}"
+                            alt="no image" />
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

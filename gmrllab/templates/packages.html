@@ -1,0 +1,150 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class=" main1 main1_package overflow-hidden">
+    <div class="container-fluid  p-0 ">
+        <div class="row main_row ">
+            <div class="col-12 page_package w-100">
+                <div class="row w-100 p-0 m-0">
+                    <div class="col-md-6 col-12  package_col1 p-0">
+                        <div class="package_text2 overflow-hidden">
+                            Packages
+                        </div>
+                        <div class="package_text3">
+                            Explore affordable Health Check Up packages at GMRL Labs, Tripunithura,
+                            ensuring precision and well-being with advanced analyzers.
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12  package_image p-0">
+                        <img src="{% static './image/package.jpg' %}" class="d-block w-100" alt="...">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- main page 2 -->
+<div class="main5 pagesall">
+    <div class="container pt-5">
+        <div class="row packagepage_nocarosel">
+            {% for i in test_packages %}
+            <div class="col-lg-4 pb-4">
+                <a href="{% url 'frond:detailpackage'  i.id %}" class="package-item-con">
+                    <h5 class="overflow-hidden" style="height: fit-content !important;">
+                        <div class="fontawsome" style="height: fit-content !important; padding-bottom: 10px;">From:
+                            <i class="fas fa-rupee-sign"></i>  {{i.price}}
+                        </div>
+                    </h5>
+                    <div class="package-image">
+                        <i class="fas fa-link"></i>
+                        <img width="300" height="230" src="{{i.image.url}}"
+                            class="attachment-medium size-medium wp-post-image" alt="no image" decoding="async"
+                            loading="lazy" />
+                    </div>
+                    <div class="package-text">
+                        <h6>{{i.package_name}}</h6>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+            {% comment %} <div class="col-lg-4 pb-4">
+                <a href="" class="package-item-con">
+                    <h5 class="overflow-hidden">
+                        <div class="fontawsome" style="height: fit-content !important; padding-bottom: 10px;">
+                            From: <i class=" fas
+                            fa-rupee-sign"></i> 699</div>
+                    </h5>
+                    <div class="package-image">
+                        <i class="fas fa-link"></i>
+                        <img width="300" height="208" src="{% static './image/package2.jpg' %}"
+                            class="attachment-medium size-medium wp-post-image" alt="no image" decoding="async"
+                            loading="lazy" />
+                    </div>
+                    <div class="package-text">
+                        <h6>Ayush General</h6>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 pb-4">
+                <a href="" class="package-item-con">
+                    <h5 class="overflow-hidden" style="height: fit-content !important;">
+                        <div class="fontawsome" style="height: fit-content !important; padding-bottom: 10px;">From:
+                            <i class="fas fa-rupee-sign"></i> 999
+                        </div>
+                    </h5>
+                    <div class="package-image">
+                        <i class="fas fa-link"></i>
+                        <img width="300" height="200" src="{% static './image/package3.jpg' %}"
+                            class="attachment-medium size-medium wp-post-image" alt="no image" decoding="async"
+                            loading="lazy" />
+                    </div>
+                    <div class="package-text">
+                        <h6>Ayush Silver Plan</h6>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 pb-4">
+                <a href="" class="package-item-con">
+                    <h5 class="overflow-hidden" style="height: fit-content !important;">
+                        <div class="fontawsome" style="height: fit-content !important; padding-bottom: 10px;">From:
+                            <i class="fas fa-rupee-sign"></i> 999
+                        </div>
+                    </h5>
+                    <div class="package-image">
+                        <i class="fas fa-link"></i>
+                        <img width="300" height="200" src="{% static './image/package4.jpg' %}"
+                            class="attachment-medium size-medium wp-post-image" alt="no image" decoding="async"
+                            loading="lazy" />
+                    </div>
+                    <div class="package-text">
+                        <h6>Ayush Diabetic &amp; Kidney Care</h6>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 pb-4">
+                <a href="" class="package-item-con">
+                    <h5 class="overflow-hidden" style="height: fit-content !important;">
+                        <div class="fontawsome" style="height: fit-content !important; padding-bottom: 10px;">From:
+                            <i class="fas fa-rupee-sign"></i> 1700
+                        </div>
+                    </h5>
+                    <div class="package-image">
+                        <i class="fas fa-link"></i>
+                        <img width="300" height="200" src="{% static './image/package5.jpg' %}"
+                            class="attachment-medium size-medium wp-post-image" alt="no image" decoding="async"
+                            loading="lazy" />
+                    </div>
+                    <div class="package-text">
+                        <h6>Ayush Gold</h6>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 pb-4">
+                <a href="#" class="package-item-con">
+                    <h5 class="overflow-hidden" style="height: fit-content !important;">
+                        <div class="fontawsome" style="height: fit-content !important; padding-bottom: 10px;">From:
+                            <i class="fas fa-rupee-sign"></i> 4900
+                        </div>
+                    </h5>
+                    <div class="package-image">
+                        <i class="fas fa-link"></i>
+                        <img width="300" height="200" src="{% static './image/cardiac.jpg' %}"
+                            class="attachment-medium size-medium wp-post-image" alt="no image" decoding="async"
+                            loading="lazy" />
+                    </div>
+                    <div class="package-text">
+                        <h6>Advanced Cardiac Risk Cover Package</h6>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </a>
+            </div> {% endcomment %}
+        </div>
+    </div>
+
+    {% endblock %}

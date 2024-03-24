@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="main1 overflow-hidden ">
+    <div class="container-fluid  p-0 ">
+        <div class="row main_row ">
+            <div class="col-12 page_about w-100">
+                <div class="row w-100 p-0 m-0">
+                    <div class="col-md-6 col-12  about_col1 p-0">
+                        <div class="about_text2 overflow-hidden">
+                            Tests
+                        </div>
+                        <div class="about_text3 " style="height: fit-content;">
+                            Empower your wellness journey with comprehensive health assessments and diagnostic
+                            tests for personalized care on our Tests page.
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12  about_image p-0">
+                        <img src="{% static './image/tests.jpg' %}" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="main_available_tests test test-page">
+    <div class="container">
+        <div class="row available_tests">
+            {% regroup all_our_tests by test_type as test_type_list %}
+            {% for test_type_group in test_type_list %}
+            <div class="col-lg-4 col-12">
+                <h4>{{ test_type_group.grouper }}</h4>
+                <ul>
+                    {% for our_test in test_type_group.list %}
+                    <h6>{{ our_test.test_name }}</h6>
+                    
+                        <ul>
+                            {% for test_item in our_test.get_testes_list %}
+                            <li>{{ test_item }}</li>
+                            {% endfor %}
+                        </ul>
+                   
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+<div>
+
+</div>
+
+{% endblock %}

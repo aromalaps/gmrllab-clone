@@ -1,0 +1,423 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="main_welcome_page overflow-hidden">
+    <div class="container-fluid main_contain_carosel pb-5 ">
+        <div class="row main_row ">
+            <!-- carousel -->
+            <div class="col-12 carosel w-100">
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row h-100 w-100 p-0 m-0">
+                                <div class="col-md-6 col-12   carosel_col1  p-0">
+                                    <h6 class="carosel_text2 overflow-hidden">
+                                        Unlocking Vital Insights:Your Blood, Your
+                                        Lab
+                                    </h6>
+                                    <div class="carosel_text3">
+                                        Unlocking Vital Insights :Where Your Blood Holds the Key to Your
+                                        Health - Welcome to Your Trusted Laboratory</div>
+                                    <a href="{% url 'aboutus' %}" class="btn  carosel_learn_more1">Learn More</a>
+                                </div>
+                                <div class="col-md-6 col-12  carosel_image p-0">
+                                    <img src="{% static 'image/banner-01.jpg' %}" class="d-block w-100" alt="...">
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="row h-100 w-100 p-0 m-0">
+                                <div class="col-md-6 col-12 carosel_col1  p-0">
+                                    <h6 class="carosel_text2 carosel_text2_c2 overflow-hidden">Your Journey to
+                                        Wellness:Precision
+                                        Diagnostics,
+                                        Compassionate Care.</h6>
+                                    <div class="carosel2_text3 pt-4">Experience excellence in healthcare
+                                        at our
+                                        state-of-art lab, where precision meets compassion for
+                                        well-being.</div>
+                                    <a href="{% url 'aboutus' %}" class="btn  carosel_learn_more2">Learn More</a>
+                                </div>
+                                <div class="col-md-6 col-12 carosel_image p-0">
+                                    <img src="{% static 'image/banner-02.jpg' %}" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- news_and_events_contain -->
+                    <div class="container-fluid news_and_events_contain ">
+                        <div class="row  news_and_events mx-md-5">
+                            <div class="col-9 col-md-2  text-center news_and_events_text1 py-2 ">
+                                <i class="fas fa-bullhorn pe-2"></i>
+                                News & Events
+                            </div>
+                            <div class="col-9  news_and_events_text2 py-2 ">
+                                <marquee behavior="" direction="">
+                                    {% for i in news %}
+                                    {{i.news}}
+                                    {% endfor %}
+                                </marquee>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="gapcontain" id="about"></div>
+<div class="main2 ">
+    <div class="container-fluid  main2_contain ">
+        <div class="row main2_row1 overflow-hidden">
+            <div class="col-md-5 col-12 main2_column1 p-0   overflow-hidden">
+                <div class="image overflow-hidden ms-md-5 ms-0 main2_column1_image ">
+                    <img src="{% static 'image/welcome-image.jpg' %}" alt="">
+                </div>
+            </div>
+            <div class="col-md-7 col-12 main2_column2  p-0 overflow-hidden" style="z-index:1 !important;">
+                <p class="overflow-hidden main2_text1  text-primary">
+                    Welcome to GMRL Lab
+
+                </p>
+                <h5 class="overflow-hidden main2_text2   headings">Elevating Health Through
+                    Precision Diagnostics: GMRL Laboratories</h5>
+                <p class="overflow-hidden  fw-bolder a_text pt-4">
+                    Welcome To GMRL Laboratories
+                </p>
+                <p class="overflow-hidden a1_text">
+                    Best Laboratory in Ernakulam, a beacon of healthcare
+                    excellence situated
+                    in the heart of
+                    Thrippunithura. Our commitment is to bring you comprehensive and affordable Health
+                    Check-Up
+                    Packages, ensuring your well-being is our top priority.
+                </p>
+                <p class=" overflow-hidden main2_text5 a_text fw-bolder">Cutting-edge Technology for
+                    Accurate
+                    Results
+                </p>
+                <p class="overflow-hidden a1_text">At GMRL Laboratories, our state-of-the-art facility
+                    is
+                    equipped with
+                    fully automated analyzers,
+                    demonstrating our dedication to excellence. Additionally, these analyzers undergo
+                    daily
+                    verification against Biorad USA Quality Controls, assuring you not only accuracy but
+                    also
+                    reliability in every diagnostic result. Moreover, we understand the significance of
+                    your health,
+                    and our stringent quality assurance practices reflect our commitment to providing
+                    the best
+                    possible care.
+                </p>
+                <p class="a_text fw-bolder overflow-hidden main2_text6">
+                    Guiding You Through Your Health Journey
+                </p>
+                <p class="overflow-hidden a1_text">
+                    Our team of dedicated professionals is here to guide you through every step of your
+                    health
+                    assessment journey. With a mission to provide the highest standard of care and
+                    convenience,
+                    we ensure that your experience at GMRL Laboratories is both seamless and empowering.
+                    Your
+                    health is not just a diagnosis to us; it’s a journey, and we’re honored to be your
+                    trusted
+                    partner on the path to a healthier, happier life.
+                </p>
+
+                <p class="a_text fw-bolder overflow-hidden main2_text8">
+                    The Human Touch in Healthcare
+                </p>
+                <p class="overflow-hidden a1_text">
+
+                    What sets us apart is not just our advanced technology but the human touch we bring
+                    to
+                    healthcare. We believe in creating a supportive environment where you feel informed
+                    and
+                    cared for. Furthermore, from precise testing to comprehensive health assessments, we
+                    strive
+                    to make your experience with GMRL Laboratories both enriching and reassuring.
+                </p>
+                <p class="a_text fw-bolder overflow-hidden main2_text10">
+                    Looking Ahead with Innovation
+                </p>
+                <p class="overflow-hidden a1_text">
+
+                    As we look ahead, our commitment to innovation and excellence remains unwavering. We
+                    understand
+                    that a proactive approach to healthcare is essential. Therefore, we are here to
+                    empower you with
+                    the knowledge and insights needed to make informed decisions about your well-being.
+                </p>
+                <p class="a_text fw-bolder overflow-hidden main2_text12">
+                    Choose GMRL Laboratories for Optimal Health
+                </p>
+                <p class="overflow-hidden a1_text">
+                    Best laboratory in Ernakulam for a healthcare experience that goes beyond
+                    expectations – where
+                    cutting-edge technology meets compassionate care. Your journey to optimal health
+                    begins with us,
+                    and we’re excited to be a part of it. Trust GMRL Laboratories, where your health is
+                    our passion,
+                    and your well-being is our commitment.
+                </p>
+                <a href="{% url 'aboutus' %}" class="btn main2_learnmore">Learn more</a>
+            </div>
+
+        </div>
+    </div>
+    <!-- main2 -->
+    <div class="container mb-5">
+        <div class="main-btm-buttons">
+            <div class="row">
+
+                <div class="main2col">
+                    <a href="{% url 'form:makeappointment' %}">
+                        <span></span>
+                        <h6>Book An Appointment</h6>
+                    </a>
+                </div>
+                <div class="main2col">
+                    <a href="{% url 'branch' %}">
+                        <span></span>
+                        <h6>Reach Us</h6>
+                    </a>
+                </div>
+                <div class="main2col">
+                    <a href="{% url 'package' %}">
+                        <span></span>
+                        <h6>Health Packages</h6>
+                    </a>
+                </div>
+                <div class="main2col">
+                    <a href="{% url 'frond:tests' %}">
+                        <span></span>
+                        <h6>Available Tests</h6>
+                    </a>
+                </div>
+                <div class="main2col">
+                    <a href="{% url 'form:makeappointment' %}">
+                        <span></span>
+                        <h6>Home Visit</h6>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- department carosel -->
+<!-- main3 -->
+<div class="main3">
+    <div class="container pb-5 " id="department">
+        <h2 class="main3_heading overflow-hidden">
+            Diverse Departments <br>
+            for Comprehensive Health Services
+        </h2>
+        <div class="scroll row pb-5">
+            {% for i in dept %}
+            <div class="col-lg-20 px-2">
+                <a href="" class="department-item_main3">
+                    <span>
+                        <div class="items">
+                            <img src="{{i.dep_image.url}}" alt="Pathology" />
+                        </div>
+                        <h6>{{i.dep_name}}</h6>
+                    </span>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+    <!-- emergency -->
+    <!-- <div class="main4"> -->
+    <div class="container emergency rounded-1">
+        <div class="row  rounded-1">
+            <div class="col-md-8 col-12 pt-3  main4column1 rounded-start">
+                <div class="row main4row_2">
+                    <div class="col-1 ps-4 pe-md-5 pe-0  main4_phone_icon">
+                        <i class="fas fa-phone-alt pt-3 mt-1  "></i>
+                    </div>
+                    <div class="col-md-5 col-12 main4_emergency">
+                        <p class="h2 fw-normal">Emergency Call:</p>
+                        <p class="fw-bold ">Immediate Assistance Available - Dial Now!</p>
+                    </div>
+                    <a href="tel:+91 81388 6262"
+                        class="col-md-5 col-9 ps-md-0 ps-5 ms-md-0 ms-4  pt-md-3 pt-0 h2 number_emergency text-white">
+                        +91 81388
+                        62626</a>
+                </div>
+            </div>
+            <div class="col-md-4 py-2  py-md-0 col-12 main4column_2 rounded-end">
+                <div class="row pt-md-2">
+                    <div class="col-2  main4_download">
+                        <i class="fas fa-download pt-3"></i>
+                    </div>
+                    <div class="col pt-md-0 pt-2 ps-3 m-0">
+                        <h6 class="p-0 m-0 text-white h5">Download</h6>
+                        <h4 class="text-white h2">BROCHURE</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="main5">
+    <div class="container pt-5 pb-5 mb-5">
+        <div class="row">
+            <div class="col-10 ">
+                <p class="main5_headings ">GMRL Laboratories: <br>
+                    Unveiling Our Range of Health Packages</p>
+            </div>
+            <div class="col-12 pb-md-0 pb-2 col-md-2 main_5_bttn" style="z-index:10 !important;">
+                <a class="btn  main5_viewmore_button" href="{% url 'package' %}">View More</a>
+            </div>
+        </div>
+        <div class="package-scroll row">
+            {% for i in test_packages %}
+            <div class="col-lg-4">
+                <a href="{% url 'frond:detailpackage'  i.id %}" class="package-item-con">
+                    <h5>
+                        <div class="fontawsome" style="height: fit-content !important; padding-bottom: 10px;">From: <i
+                                class="fas fa-rupee-sign"></i> {{i.price}}
+                        </div>
+                    </h5>
+                    <div class="package-image">
+                        <i class="fas fa-link"></i>
+                        <img width="300" height="230" src="{{i.image.url}}" class="main6_review"
+                            alt="{{i.image.url}}" />
+                    </div>
+                    <div class="package-text">
+                        <h6>{{i.package_name}}</h6>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<div class="main5 bg-light ">
+    <div class="container  mb-5">
+        <div class="row">
+            <div class="col-12 pb-5 text-center main6_headings ">
+                Our Testimonials
+            </div>
+        </div>
+        <div class="main6_package-scroll row">
+            {% for i in testinomial %}
+            <div class="col-lg-4" style="width: 300px !important;">
+                <a href="" class="main6_package-item-con">
+                    <div class="main6_package-text1">
+                        <div class="main6_review">
+                            <p class="p-4 text-dark m-2">{{i.Description}}</p>
+                        </div>
+                    </div>
+                    <div class="main6_package-text2">
+                        <h6>{{i.name}}</h6>
+                        <p>{{i.place}}</p>
+                        <img src="{% static 'image/testimonial-bg.png ' %}" alt="">
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<div class="main7">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 main7_headings pb-5" style="z-index:10 !important;">
+                <h2 class="overflow-hidden">Embrace Excellence:<br />
+                    Why GMRL Laboratories Stands Out
+                </h2>
+                <p>At GMRL Laboratories, we stand out as a beacon of excellence, offering top-notch
+                    diagnostic
+                    services and a commitment to your well-being.
+                </p>
+                <ul>
+                    <li>Cutting-edge, precision diagnostic technology</li>
+                    <li>A highly skilled, dedicated team of healthcare professionals</li>
+                    <li>Stringent quality control protocols to ensure result accuracy</li>
+                    <li>An extensive selection of comprehensive Health Check Up Packages</li>
+                    <li>Competitive and accessible pricing to promote your health</li>
+                    <li>Convenient, patient-centric services for your well-being</li>
+                </ul>
+                <a href="{% url 'aboutus' %}" class="btn  btn-sm ">Learn More</a>
+            </div>
+            <div class="col-lg-4">
+                <div class="enquiry">
+                    <h3 class="overflow-hidden">Enquiry</h3>
+                    <p>For any inquiries, please feel free to <br>reach out to us.</p>
+                    <form action="" method="post" enctype="multipart/form-data" onsubmit="return EnquiryForm()">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-lg-12 fields">
+                                <input placeholder="Your Name" value="" type="text" name="name" id="enquiry_name" />
+                            </div>
+                            <div class="col-lg-12 fields">
+                                <input placeholder="Email" value="" type="email" name="email" id="enquiry_email" />
+                            </div>
+                            <div class="col-lg-12 fields">
+                                <input placeholder="Phone" value="" type="text" name="phone" id="enquiry_phone" />
+                            </div>
+                            <div class="col-lg-12 fields">
+                                <textarea cols="40" rows="10" placeholder="Message" name="message"
+                                    id="message"></textarea>
+                            </div>
+                            <div class="col-lg-12 fields">
+                                <button class="btn submit-btn text-light" type="Submit">submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="main8">
+    <div class="container main8contain">
+        <div class="row main8row1">
+            <div class="col-lg-8  main8col1">
+                <div class="row main8row2 my-2 ">
+                    <div class="col-1 main8col2  m-3  me-4 ">
+                        <img src="{% static './image/make-appointment.png ' %}" alt="">
+
+                    </div>
+                    <div class="col-5 ms-2 mt-2">
+                        <a href="{% url 'form:makeappointment' %}">
+                            <h4 class="p-0 m-0 text-dark">Make an Appointment</h4>
+                        </a>
+                        <p>Call <a href="tel:+91 81388 6262" class="text-dark"> +91 81388 62626 </a>or click Book Now to
+                            secure your appointment.</p>
+                    </div>
+                    <div class="col-4">
+                        <a class="main8_booknow fw-bold" href="{% url 'form:makeappointment' %}">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 main8_openhours">
+                <div class="row my-3">
+                    <div class="col-2 overflow-visible me-2 mt-1">
+                        <img src="{% static './image/openinh-hours-logo.png ' %}" alt="">
+                    </div>
+
+                    <div class="col-7 ">
+                        <h4 class="p-0 m-0">Opening Hours</h4>
+                        <p class="p-0 m-0">Mon - Sat : 6:30pm to 6:00pm</p>
+                        <p class="p-0 m-0">Sun : 6:30am - 12:30pm</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="{% static 'js/enquiry.js' %}"></script>
+{% endblock %}
