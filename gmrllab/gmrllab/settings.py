@@ -77,8 +77,11 @@ TEMPLATES = [
                 'labapp.context_processors.Blog_detail',
                 'labapp.context_processors.Gallerys',
                 'labapp.context_processors.Branch',
-            ], 
-        },    
+                'labapp.context_processors.Privacyandpolicy',
+                'labapp.context_processors.TermsandCondition',
+                'labapp.context_processors.About',
+            ],
+        },
     },
 ]
 

@@ -316,10 +316,12 @@ a:hover {
 }
 
 
+
+
 @media (width<=550px) {
 
     .main_welcome_page {
-        padding-top: 310px;
+        padding-top: 0px;
     }
 
     .main {

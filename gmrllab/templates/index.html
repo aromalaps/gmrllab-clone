@@ -2,14 +2,14 @@
 {% load static %}
 {% block content %}
 <div class="main_welcome_page overflow-hidden">
-    <div class="container-fluid main_contain_carosel pb-5 ">
+    <div class="container-fluid main_contain_carosel pb-2 overflow-hidden">
         <div class="row main_row ">
             <!-- carousel -->
-            <div class="col-12 carosel w-100">
-                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="row h-100 w-100 p-0 m-0">
+            <div class="col-12 carosel w-100 overflow-hidden" style="height:fit-content;">
+                <div id="carouselExampleSlidesOnly" class="carousel slide " data-bs-ride="carousel">
+                    <div class="carousel-inner ">
+                        <div class="carousel-item active ">
+                            <div class="row h-100 w-100 p-0 m-0 " >
                                 <div class="col-md-6 col-12   carosel_col1  p-0">
                                     <h6 class="carosel_text2 overflow-hidden">
                                         Unlocking Vital Insights:Your Blood, Your
@@ -221,7 +221,7 @@
         <div class="scroll row pb-5">
             {% for i in dept %}
             <div class="col-lg-20 px-2">
-                <a href="" class="department-item_main3">
+                <a href="{% url 'frond:E_dep_detail' i.id %}" class="department-item_main3">
                     <span>
                         <div class="items">
                             <img src="{{i.dep_image.url}}" alt="Pathology" />

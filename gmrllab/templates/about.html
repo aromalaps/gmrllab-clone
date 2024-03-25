@@ -98,8 +98,14 @@
                     you with
                     the knowledge and insights needed to make informed decisions about your well-being.
                 </p>
-
-               
+                {% for i in about %}
+                <p class="a_text fw-bolder overflow-hidden main2_text10">
+                    {{i.heading}}
+                </p>
+                <p class="overflow-hidden a1_text">
+                    {{i.description}}
+                </p>
+                {% endfor %}
             </div>
             <div class="col-md-5 col-12 main2_column1 p-0   overflow-hidden">
                 <div class="image overflow-hidden ms-md-5 ms-0 main2_column1_image ">

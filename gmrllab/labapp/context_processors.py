@@ -1,5 +1,5 @@
-from frondpage.models import Our_Tests,TestPackage,Tests,OurTestinomials,Departments,News_and_events,Blogs,Blog_details,Gallery,Branches
-
+from frondpage.models import Our_Tests,TestPackage,Tests,OurTestinomials,Departments,News_and_events,Blogs,Blog_details
+from frondpage.models import Privacy,TermsandConditions,Departments,AboutUs,Gallery,Branches
 def Testpackages(req):
     test_packages=TestPackage.objects.all()
     return dict(test_packages=test_packages)
@@ -30,4 +30,12 @@ def Gallerys (req):
 def Branch(req):
     branch=Branches.objects.all()
     return dict(branch=branch)
-
+def Privacyandpolicy(req):
+    privacy=Privacy.objects.all()
+    return dict(privacy=privacy)
+def TermsandCondition(req):
+    terms=TermsandConditions.objects.all()
+    return dict(terms=terms)
+def About(req):
+    about=AboutUs.objects.all()
+    return dict(about=about)

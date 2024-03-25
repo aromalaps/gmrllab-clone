@@ -164,7 +164,7 @@
     }
 
     .gapcontain {
-        height: 0vh !important;
+        height: 100vh !important;
     }
 
     .main2_column1_image img {
@@ -251,9 +251,13 @@
     display: block;
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 550px) {
     .test {
         margin-top: 60px;
         margin-bottom: 60px;
+    }
+
+    .gapcontain {
+        height: 0vh !important;
     }
 }

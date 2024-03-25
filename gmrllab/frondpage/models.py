@@ -37,6 +37,8 @@ class News_and_events(models.Model):
 class Departments(models.Model):
     dep_name=models.CharField(max_length=150,unique=True)
     dep_image=models.ImageField(upload_to='department/')
+    dep_decrption=models.TextField()
+    dep_detail_banner=models.ImageField(upload_to='departmentbanner/')
     def __str__(self):
         return self.dep_name
     
@@ -79,3 +81,19 @@ class Branches(models.Model):
 
     def __str__(self):
         return self.branch_place
+    
+class Privacy(models.Model):
+    heading=models.CharField(max_length=500)
+    description=models.TextField()
+    def __str__(self):
+        return self.heading
+class TermsandConditions(models.Model):
+    heading=models.CharField(max_length=500)
+    description=models.TextField()
+    def __str__(self):
+        return self.heading
+class AboutUs(models.Model):
+    heading=models.CharField(max_length=500)
+    description=models.TextField()
+    def __str__(self):
+        return self.heading

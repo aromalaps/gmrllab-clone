@@ -35,15 +35,19 @@
                     <a href="{% url 'form:contactform' %}">
                         <li>Contact Us</li>
                     </a>
-                    <li>Privacy Policy</li>
-                    <li>Terms & Conditions</li>
+                    <a href="{% url 'frond:privacy' %}">
+                        <li>Privacy Policy</li>
+                    </a>
+                    <a href="{% url 'frond:terms' %}">
+                        <li>Terms & Conditions</li>
+                    </a>
                 </ul>
             </div>
             <div class="footercolum2 col-6 col-lg-2 col-md-5  ">
-                <h5 class="pb-3">Departments</h5>
+                <h5 class="pb-3"><a href="{% url 'frond:dep_detail' %}">Departments</a></h5>
                 <ul class="p-0">
                     {% for i in dept %}
-                    <a href="#department">
+                    <a href="{% url 'frond:E_dep_detail' i.id %}">
                         <li> {{i.dep_name}}</li>
                     </a>
                     {% endfor %}

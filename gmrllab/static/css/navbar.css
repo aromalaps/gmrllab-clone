@@ -1,6 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
+* {
+    overflow-x: hidden !important;
+}
 
+html,
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    height: fit-content !important;
+
+}
 
 body {
     position: relative;
@@ -29,6 +40,18 @@ body {
     }
 }
 
+.navbar-custom .navbar-nav .nav-link {
+    color: #fdfdfd;
+    border-bottom: 1px solid rgba(230, 233, 90, 0.5);
+    /* Change to your desired color */
+}
+
+.navbar-custom .navbar-nav .nav-link:hover {
+    background-color: #53d119;
+    border-bottom: 1px solid #53d119;
+}
+
+
 
 
 .whatsapp-icon {
@@ -40,6 +63,19 @@ body {
 }
 
 
+a {
+    text-decoration: none !important;
+    transition-duration: 0.3s !important;
+}
+
+a:hover {
+    text-decoration: none !important;
+}
+
+
+
+
+
 .main {
     height: 100%;
 }
@@ -47,18 +83,19 @@ body {
 
 
 .main_contain {
-    height: 70vh;
+    height: 80vh;
 }
 
 .navbar {
     transition: top 0.3s;
+    z-index: 100 !important;
 }
 
 .navbar.sticky {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000;
+
 }
 
 .nav_contain {
@@ -67,6 +104,11 @@ body {
 
 .nav-link {
     font-size: 18px !important;
+}
+
+.navbar-collapse .navbar-nav .nav-link:hover {
+    background-color: #53d119;
+    color: white;
 }
 
 .navbar-collapse {
@@ -85,9 +127,6 @@ body {
 }
 
 
-
-
-
 .nav_co_text1 {
     display: flex;
     justify-content: end;
@@ -103,7 +142,7 @@ body {
 
 
 .makeappointment {
-    background-color: rgb(83, 209, 25);
+    background-color: #53d119;
 }
 
 @media (width<=991px) {
@@ -123,7 +162,7 @@ body {
 
     .navbar-brand img {
         width: auto;
-        height: 30px;
+        height: 40px;
     }
 
 
@@ -144,7 +183,7 @@ body {
 @media (max-width: 550px) {
 
     .main {
-        height: 43vh !important;
+        height: 85vh !important;
     }
 
     .fb-ico {
@@ -154,6 +193,11 @@ body {
 
     .makeappointment {
         font-size: 13px;
+
+
     }
 
 }
+
+/* chatgpt
+ */

@@ -272,7 +272,14 @@
     }
 }
 
-@media(max-width: 520px) {
+@media(max-width: 770px) {
+    .blog_ditails {
+        padding-top: 300px !important;
+
+    }
+}
+
+@media(max-width: 550px) {
 
     .banner-wrapper .caption-middle-align h2,
     .home-page-heading,
@@ -286,12 +293,14 @@
     }
 
     .blog_ditails {
-        padding-top: 320px !important;
+        padding-top: 20px !important;
 
     }
 
     .blog_detail_image img {
         padding: 10px;
+        width: 1000px;
+        height: auto;
     }
 
 }
@@ -305,7 +314,7 @@
 
 .blog_detail_image img {
     border-radius: 5px;
-    width: 389px !important;
-    height: 311px !important;
+    width: 389px;
+    height: 311px;
     background-size: contain !important;
 }

@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class=" main1 main1_package overflow-hidden">
+    <div class="container-fluid  p-0 ">
+        <div class="row main_row ">
+            <div class="col-12 page_package w-100">
+                <div class="row w-100 p-0 m-0">
+                    <div class="col-md-6 col-12  package_col1 p-0">
+                        <div class="package_text2 overflow-hidden">
+                            {{dep_detail.dep_name}}
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-6 col-12  package_image p-0">
+                        <img src="{% static './image/package.jpg' %}" class="d-block w-100" alt="...">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- main page 2 -->
+<div class="   pb-5 blog_ditails">
+    <div class="container-fluid  main2_contain ">
+        <div class="row main2_row1 overflow-hidden">
+            {% comment %} {% for detail in dept %} {% endcomment %}
+            <div class="col-md-7 col-12 main2_column2  my-1 ps-5 overflow-hidden">
+                <p class="h2">
+                    {{ dep_detail.dep_name }}
+                </p>
+                <p class="pt-3 ">
+                    {{ dep_detail.dep_decrption }}
+                </p>
+            </div>
+
+            <div class="col-md-5 col-12 main2_column1 p-0 my-1  overflow-hidden">
+                <div class="row">
+                    <div class="col-12 ">
+                        <div class="blog_detail_image overflow-hidden ms-md-5 ms-0">
+                            <img src="{{ dep_detail.dep_detail_banner.url }}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% comment %} {% endfor %} {% endcomment %}
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
