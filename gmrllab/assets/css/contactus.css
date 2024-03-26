@@ -1,0 +1,170 @@
+.contactus_box1 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 24% !important;
+    height: 230px;
+    border: 1px solid rgba(184, 184, 184, 0.534);
+    border-bottom: 2px solid rgb(24, 24, 92);
+}
+
+.icon1_contactus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    height: 88px;
+    width: 88px;
+    border-radius: 50%;
+}
+
+.icon1_contactus {
+    background-color: rgb(11, 53, 133);
+    transition: .5s;
+
+}
+
+.contactuspage_text1 {
+    position: absolute;
+    font-size: 20px;
+    bottom: 35%;
+}
+
+.contactuspage_text2 {
+    position: absolute;
+    bottom: 15%;
+    text-align: center;
+}
+
+.contactuspage_text3 {
+    position: absolute;
+    bottom: 5%;
+    text-align: center;
+}
+
+.contactus_box1:hover {
+    border-bottom: 2px solid rgb(43, 161, 63);
+}
+
+.contactus_box1:hover .icon1_contactus {
+    background-color: #85ba32 !important;
+    transition: .7s;
+}
+
+/* contact page */
+.contact_image img {
+    height: 70vh !important;
+}
+
+.main_contactus {
+    height: 0vh !important;
+}
+
+.contact_page {
+    width: 100%;
+    margin-top: 80px;
+
+}
+
+.container {
+    max-width: 1240px !important
+}
+
+.contact_page img {
+    width: 100%;
+    object-fit: cover;
+    height: 375px;
+    border-radius: 4px;
+}
+
+.contact_page h4 {
+    width: 100%;
+    padding: 0;
+    margin: 0px 0px 5px 0px;
+    font-size: 26px;
+}
+
+.contact_page p {
+    padding: 0;
+    margin: 0;
+}
+
+.contact_page input {
+    width: 100%;
+    border: 1px solid #c8d1ee;
+    height: 44px;
+    border-radius: 4px;
+    outline: none;
+    transition-duration: 0.3s;
+    font-size: 15px;
+    padding-left: 12px;
+}
+
+.contact_page textarea {
+    width: 100%;
+    border: 1px solid #c8d1ee;
+    height: 120px;
+    border-radius: 4px;
+    outline: none;
+    transition-duration: 0.3s;
+    font-size: 15px;
+    padding-left: 12px;
+}
+
+.contact_page .submit-btn {
+    width: 100%;
+    height: 44px;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 15px;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    transition-duration: 0.3s;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.contact_page .col-lg-6,
+.contact_page .col-lg-12 {
+    margin-top: 15px;
+}
+
+@media (max-width: 980px) {
+
+    .contact_page .col-lg-5 img {
+        height: auto;
+    }
+
+    .contact_page .col-lg-7 h4 {
+        text-align: center;
+        margin-top: 45px;
+    }
+
+    .contact_page p {
+        text-align: center;
+    }
+
+    .contactus_box1 {
+        width: 48% !important;
+    }
+
+}
+
+@media (max-width: 520px) {
+    .contact_page {
+        margin-top: 60px;
+    }
+
+    .contactus_box1 {
+        width: 100% !important;
+    }
+
+    .contact_image img {
+        height: 40vh !important;
+    }
+
+    .main_contactus {
+        height: 35vh !important;
+    }
+}

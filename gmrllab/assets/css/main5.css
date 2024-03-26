@@ -1,0 +1,210 @@
+.main5_headings {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 50px;
+    font-weight: 100;
+    width: 100%;
+}
+
+.main_5_bttn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main5_viewmore_button {
+
+    background-color: rgb(0, 0, 99) !important;
+    color: white !important;
+    border-radius: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.main5_viewmore_button:hover {
+    background-color: rgb(43, 153, 43) !important;
+}
+
+.package-item-con {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    display: block;
+}
+
+.package-image {
+    width: 100%;
+    height: 220px;
+    display: block;
+    position: relative;
+    background: rgb(175, 175, 189);
+    overflow: hidden;
+}
+
+.package-image img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    transition-duration: 0.3s;
+}
+
+.package-image i {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    margin-left: -12px;
+    margin-top: -12px;
+    z-index: 990;
+    color: #fff;
+    font-size: 24px;
+    transition-duration: 0.3s;
+    opacity: 0;
+}
+
+.package-item-con:hover .package-image i {
+    opacity: 1;
+    top: 50%;
+    color: green;
+    transition-duration: .5s;
+}
+
+.package-item-con:hover .package-image img {
+    opacity: 0.2;
+    transform: scale(1.5);
+}
+
+.package-item-con h5 {
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 990;
+    text-align: right;
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+.fontawsome {
+    overflow: hidden !important;
+}
+
+.package-item-con h5 .fontawsome {
+    background: #fff;
+    color: black;
+    font-size: 15px;
+    display: inline-block;
+    font-weight: 700;
+    width: auto;
+    padding: 6px 15px;
+    position: relative;
+    top: 10px;
+    right: 10px;
+}
+
+.package-item-con:hover h5 .fontawsome {
+    color: blue;
+}
+
+.package-item-con:hover h5 .fontawsome i {
+
+    color: blue;
+}
+
+.package-item-con h5 {
+    overflow: hidden !important;
+}
+
+.package-item-con h5 .fontawsome i {
+    font-size: 14px;
+    color: black;
+    overflow: hidden !important;
+}
+
+.package-text {
+    width: 100%;
+    height: 80px;
+    display: table;
+    position: relative;
+    text-align: left;
+    color: rgb(0, 0, 0);
+    transition-duration: 1.5s;
+    padding: 0px 35px 0px 20px;
+}
+
+.package-text h6 {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 16px;
+    transition-duration: 0.3s;
+}
+
+.package-text i {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+
+    font-size: 18px;
+}
+
+.package-item-con:hover .package-text {
+    background: greenyellow !important;
+
+}
+
+.package-item-con:hover .package-text h6,
+.package-item-con:hover .package-text i {
+    color: #ffffff;
+}
+
+.package-scroll,
+.testimonials-scroll {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.package-scroll .col-lg-4,
+.testimonials-scroll .col-lg-12 {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+@media (max-width: 980px) {
+
+    .heathpackage-wrapper .home-page-heading,
+    .heathpackage-wrapper .col-lg-3,
+    .whychooseus-wrapper .col-lg-8 h2,
+    .whychooseus-wrapper .col-lg-8 {
+        text-align: center;
+    }
+}
+
+@media(max-width: 550px) {
+
+    .col-lg-8 h2 {
+        font-size: 28px;
+    }
+
+    .main5 .col-10 {
+        width: 100vw !important;
+    }
+
+    .main5_headings {
+        text-align: center !important;
+        font-size: 25px !important;
+        width: fit-content !important;
+
+    }
+
+    .main5_viewmore_button {
+        color: white !important;
+        font-size: 14px;
+        border-radius: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

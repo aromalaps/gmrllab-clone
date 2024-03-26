@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
-from labapp.models import Contactus,Appointment,Enquiry  # Assuming your Contactus model is in the same app
+from labapp.models import Contactus,Appointment,Enquiry  
+from django.views.decorators.csrf import csrf_exempt
+# Assuming your Contactus model is in the same app
 # enquiry form is at labapp
 
 def ContactUs(req):
